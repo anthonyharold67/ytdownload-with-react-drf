@@ -1,38 +1,148 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: 0;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,
+body {
+  font-family: "Mulish", sans-serif;
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+form h3 {
+  font-size: 50px;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+
+form .search {
+  display: flex;
+  width: 700px;
+
+  
+}
+
+form .search input {
+  flex: 1;
+  height: 50px;
+  border-radius: 50px 0 0 50px;
+  border: 2px solid #ddd;
+  font-size: 20px;
+  padding: 0 20px;
+  border-right: none;
+
+}
+form .search input:focus {
+  border-color: cornflowerblue;
+}
+form .search input:focus + button {
+  border-color: cornflowerblue;
+  background: cornflowerblue;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+form button {
+  width: 130px;
+  height: 50px;
+  border-radius: 0 50px 50px 0;
+  font-size: 20px;
+  background: #f5f5f5;
+  color: #333;
+  border: 2px solid #ddd;
+  cursor: pointer;
+}
+form button:hover {
+  background: #eee;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form {
+  text-align: center;
+}
+
+
+.result .video-item {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+}
+.result img {
+  height: 120px;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+.result .video-details span{
+  color: rgba(#222, .6);
+  width: 140px;
+}
+.result .video-details div{
+  display: flex;
+  align-items: center;
+  padding-bottom: 6px;
+}
+.result .title {
+  font-size: 25px;
+  font-weight: 800;
+}
+
+
+.result ul{
+  margin-top: 30px;
+}
+.result li{
+  display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      border: 2px solid #ddd;
+      height: 60px;
+      border-radius: 60px;
+      padding: 0 10px 0 30px;
+}
+.result li> div span {
+  font-size: 18px;
+  color: rgba(#222, .6);
+  margin-right: 15px;
+  padding-right: 15px;
+  border-right: 2px solid #ddd;
+}
+.result li>div {
+  margin-right: 40px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.result a {
+  margin-left: auto;
+  height: 40px;
+  border-radius: 40px;
+  background: #088808;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  font-size: 20px;
+  color: #fff;
+  
+}
+.result a:hover {
+  background: darken(#088808, 5%);
+}
+
+.result {
+  width: 700px;
 }
