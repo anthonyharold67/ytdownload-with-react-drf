@@ -13,7 +13,7 @@ function App() {
     console.log(url)
     if(url){
       
-      fetch(`http://127.0.0.1:8000/api/youtube?url=${url}`)
+      fetch(`https://drf-youtube.herokuapp.com/api/youtube?url=${url}`)
       .then(res => res.json())
       .then(data => {
         setVideo(data)
