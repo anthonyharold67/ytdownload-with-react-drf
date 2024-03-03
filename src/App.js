@@ -25,6 +25,7 @@ function App() {
     
     console.log(video)
   }
+  console.log(error)
   return (
     <div className="App">
       <form action="" method="get" onSubmit={e=> e.preventDefault()}>
