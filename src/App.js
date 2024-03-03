@@ -20,6 +20,7 @@ function App() {
         setLoading(true)
         if(data.info){
         setVideo(data)
+        setError(false)
         }
         else{
           throw new Error("")
