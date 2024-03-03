@@ -2,7 +2,7 @@ import React from 'react'
 
 const YoutubeVideo = ({video}) => {
     const {info,sources}=video
-    if(!video) <div>Not Found</div>
+    if(!video) return <div></div>
   return (
     <div className="result">
         <div className="video-item">
