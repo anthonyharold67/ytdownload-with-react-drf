@@ -19,10 +19,11 @@ function App() {
       .then(data => {
         if(data.info){
         setVideo(data)
-        setLoading(true)}
+        }
         else{
           throw new Error("")
         }
+        setLoading(true)
       })
       .catch(err=> setError(true))
     }
