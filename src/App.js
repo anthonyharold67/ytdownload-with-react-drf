@@ -34,8 +34,7 @@ function App() {
             <button type="submit" onClick={getVideo}>Download</button>
         </div>
     </form>
-    {loading===false && <div className="loading">Loading...</div>}
-    {error ? <div className="loading">Bir şeyler ters gitti. Başka bir video deneyiniz</div> : video && <YoutubeVideo video={video}/>}
+    {loading===false ? <div className="loading">Loading...</div> : error ? <div className="loading">Bir şeyler ters gitti. Başka bir video deneyiniz</div> : <YoutubeVideo video={video}/>}
     </div>
   );
 }
