@@ -13,7 +13,7 @@ function App() {
     console.log(url)
     if(url){
       
-      fetch(`https://drf-youtube.herokuapp.com/api/youtube?url=${url}`)
+      fetch(`http://pytube67.pythonanywhere.com/api/youtube?url=${url}`)
       .then(res => res.json())
       .then(data => {
         setVideo(data)
