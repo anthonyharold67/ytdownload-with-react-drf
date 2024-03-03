@@ -17,8 +17,12 @@ function App() {
       fetch(`https://pytube-rest-2.onrender.com/api/youtube?url=${url}`)
       .then(res => res.json())
       .then(data => {
+        if(data.info){
         setVideo(data)
-        setLoading(true)
+        setLoading(true)}
+        else{
+          throw new Error("")
+        }
       })
       .catch(err=> setError(true))
     }
