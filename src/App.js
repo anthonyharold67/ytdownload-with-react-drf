@@ -13,7 +13,7 @@ function App() {
     console.log(url)
     if(url){
       
-      fetch(`https://pytube67.pythonanywhere.com/api/youtube?url=${url}`)
+      fetch(`https://pytube-rest-2.onrender.com/api/youtube?url=${url}`)
       .then(res => res.json())
       .then(data => {
         setVideo(data)
