@@ -7,6 +7,7 @@ function App() {
   const [url,setUrl]=useState("")
   const [video,setVideo]=useState(false)
   const [loading,setLoading] = useState()
+  const [error,setError] = useState()
 
   const getVideo=()=>{
     setLoading(false)
@@ -19,6 +20,7 @@ function App() {
         setVideo(data)
         setLoading(true)
       })
+      .catch(err=> setError(true))
     }
     
     console.log(video)
@@ -28,12 +30,12 @@ function App() {
       <form action="" method="get" onSubmit={e=> e.preventDefault()}>
         <h3>Youtube Downloader</h3>
         <div className="search">
-            <input type="text" id="url" onChange={e=>setUrl(e.target.value)} placeholder="Youtube URL"/>
+            <input type="text" id="url" onChange={e=>setUrl(e.target.value)} placeholder="Youtube URL" required/>
             <button type="submit" onClick={getVideo}>Download</button>
         </div>
     </form>
     {loading===false && <div className="loading">Loading...</div>}
-    {video && <YoutubeVideo video={video}/>}
+    {error ? <div className="loading">Bir şeyler ters gitti. Başka bir video deneyiniz</div> : video && <YoutubeVideo video={video}/>}
     </div>
   );
 }
